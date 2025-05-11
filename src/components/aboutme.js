@@ -14,6 +14,19 @@ import personal4 from '../assets/images/personal4.jpg';
 import personal5 from '../assets/images/personal5.jpg';
 import personal6 from '../assets/images/personal6.jpg';
 
+// Custom arrow components
+const PrevArrow = ({ onClick }) => (
+  <div className="custom-arrow prev" onClick={onClick}>
+    ‹
+  </div>
+);
+
+const NextArrow = ({ onClick }) => (
+  <div className="custom-arrow next" onClick={onClick}>
+    ›
+  </div>
+);
+
 const AboutMe = () => {
   const sliderSettings = {
     dots: true,
@@ -22,7 +35,10 @@ const AboutMe = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2300
+    autoplaySpeed: 2300,
+    arrows: true,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />
   };
 
   return (
@@ -50,7 +66,7 @@ const AboutMe = () => {
         >
           <h1 className="about-title">About Me</h1>
           <p>
-            I'm Aryan Kharva, a Computer Science student at UNC Charlotte with a concentration in Web/Mobile Development & Software Engineering. My love for building started as a kid with LEGO Star Wars sets and Minecraft worlds — anything that let me design and problem-solve creatively. That passion turned into purpose when I started taking computer science classes in high school, thanks to the inspiration of my teacher, Dr. Alex Kaulfuss.
+            I'm Aryan Kharva, a Computer Science student at UNC Charlotte with a concentration in Web/Mobile Development & Software Engineering. My love for building started as a kid with Lego sets, Minecraft worlds, and woodworking — anything that let me design and problem-solve creatively. That passion turned into purpose when I started taking computer science classes in high school, thanks to the inspiration of my teacher, Dr. Alex Kaulfuss.
           </p>
           <p>
             I explored every corner of the field — from cybersecurity and data science to cloud computing and AI — because I believe in trying before judging. That led me to discover what I truly enjoy: building smart, beautiful tools with web technologies and generative AI.
@@ -59,15 +75,15 @@ const AboutMe = () => {
             I'm currently doing undergraduate research working on a RAG model using Llama 2 and OpenAI APIs. I’m a three-time Chancellor’s List recipient (Spring 2024, Fall 2024, and Spring 2025) and constantly looking for ways to grow as a developer and a person.
           </p>
           <p className="resume-link-wrapper">
-          🔗 <a
+            🔗 <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="animated-resume-link"
-            > View My Resume
-  </a>
-</p>
-
+            >
+              View My Resume
+            </a>
+          </p>
         </motion.div>
       </div>
 
@@ -87,7 +103,7 @@ const AboutMe = () => {
         <p>
           I bring that same spirit into my work: curious, thoughtful, and driven to build things that bring joy, clarity, or just a touch of wow.
         </p>
-        
+
         <Slider {...sliderSettings} className="personal-carousel">
           {[
             { img: personal3, caption: "The class that started it all — AP CSA, 2021" },

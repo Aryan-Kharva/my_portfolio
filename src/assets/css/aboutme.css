@@ -99,4 +99,30 @@
     color: #131468;
   }
   
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: gray;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-arrow:hover {
+    color: #555;
+  }
+  
+  .custom-arrow.prev {
+    left: -25px;
+  }
+  
+  .custom-arrow.next {
+    right: -25px;
+  }
+  
   
