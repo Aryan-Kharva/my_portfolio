@@ -64,9 +64,9 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="text-center mb-5">
-        <h1 className="section-title">portfolio.</h1>
+        <h1 className="section-title">Portfolio</h1>
         <p className="section-subtitle">
-          Check out some of my latest work. These projects showcase my skills in frontend development, web architecture, and UX/UI design.
+        Check out some of my latest work — a mix of full stack applications, frontend builds, and UI-focused projects that highlight my creativity, technical skills, and passion for user-centered design.
         </p>
       </div>
 

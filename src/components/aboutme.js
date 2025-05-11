@@ -122,6 +122,22 @@ const AboutMe = () => {
           ))}
         </Slider>
       </motion.div>
+      <br></br>
+      <br></br>
+      <motion.div 
+  className="container current-focus-section"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1, duration: 0.6 }}
+>
+  <h2 className="focus-title">Currently...</h2>
+  <p>
+  I'm continuing my undergraduate research in Generative AI. Outside the classroom, I’m refining my NBA analytics app, <strong>DribbleData</strong>, and leveling up my skills in full stack development, data handling, and modern UI design. Additionally, I'm currently brainstorming my next personal project — specifically looking into <strong>mobile development</strong>!  </p>
+  <p>
+  I'm open to opportunities across <strong>software engineering</strong>, <strong>AI/ML</strong>, <strong>frontend development</strong>, <strong>UX/UI design</strong>, and other areas of computer science where I can contribute, grow, and help build meaningful, impactful projects.
+  </p>
+</motion.div>
+
     </motion.section>
   );
 };

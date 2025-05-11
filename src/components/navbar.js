@@ -41,7 +41,7 @@ const MyNavbar = () => {
             <Nav className="ms-auto">
             <Nav.Link onClick={() => navigate('/', { replace: true })}>Home</Nav.Link>
               <Nav.Link onClick={() => handleScroll('projects')}>Projects</Nav.Link>
-              <Nav.Link onClick={() => handleScroll('contact')}>Contact Me</Nav.Link>
+              <Nav.Link onClick={() => handleScroll('contact-me')}>Contact Me</Nav.Link>
               <Nav.Link href="/about">About Me</Nav.Link>
             </Nav>
           </Navbar.Collapse>
