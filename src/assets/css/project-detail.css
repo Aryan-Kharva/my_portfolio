@@ -1,0 +1,121 @@
+.project-detail-section {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+  }
+  
+  .detail-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  
+  .detail-image {
+    flex: 1.2;
+  }
+  
+  .detail-image img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .detail-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .detail-meta {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+  
+  .detail-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .detail-features {
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .detail-features li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .detail-stack {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary {
+    background-color: #003366; /* darker blue */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #001f4d; /* even darker on hover */
+  }
+  
+  
+  /* Optional extension section */
+  .project-extension-section {
+    padding: 4rem 0;
+    background-color: #fff;
+  }
+  
+  .project-extension-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .full-width-offwhite {
+    background-color: #f9f9f9;
+  }
+  
+  .no-box {
+    box-shadow: none;
+    background-color: transparent;
+    padding: 2rem 0;
+  }
+  
+  .shadowed-section {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .project-sub-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
