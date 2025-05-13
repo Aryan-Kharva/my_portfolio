@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../assets/css/project-detail.css';
 import dribbleImage from '../assets/images/project4.png';
+import dribbleChatbot from '../assets/images/dribble_chatbot.png';
 
 const DribbleDataDetails = () => {
   return (
@@ -15,7 +16,12 @@ const DribbleDataDetails = () => {
             transition={{ duration: 0.6 }}
             style={{ flex: 1.2 }}
           >
-            <img src={dribbleImage} alt="DribbleData" className="img-fluid" style={{ width: '100%', maxHeight: '600px', objectFit: 'cover' }} />
+            <img
+              src={dribbleImage}
+              alt="DribbleData"
+              className="img-fluid"
+              style={{ width: '100%', maxHeight: '600px', objectFit: 'cover' }}
+            />
           </motion.div>
 
           <motion.div
@@ -26,24 +32,22 @@ const DribbleDataDetails = () => {
           >
             <h1 className="detail-title">DribbleData</h1>
             <div className="detail-meta">
-              <span>NBA Analytics</span>
-              <span>Full Stack</span>
+              <span>NBA Stats Explorer</span>
+              <span>Team Project</span>
             </div>
             <p className="detail-desc">
-              DribbleData is a full-stack NBA analytics app built for basketball fans and stat geeks. Users can explore recent player performance, compare two players head-to-head, and interact with dynamic stat visualizations powered by Chart.js and Flask.
+              DribbleData is a basketball analytics platform that lets users explore NBA stats through charts, filters, and a generative AI-powered chatbot. It was developed as a final group project combining frontend, backend, and AI integration.
             </p>
             <ul className="detail-features">
-              <li>Search and visualize last 5 games for any NBA player</li>
-              <li>Compare two players side-by-side with interactive bar charts</li>
-              <li>Real-time autocomplete suggestions from nba_api</li>
-              <li>User auth system with signup/login/logout flow</li>
-              <li>Built-in chatbot powered by OpenAI GPT for Q&A</li>
+              <li>NBA stat visualizations and filters</li>
+              <li>Chatbot to answer basketball questions using AI</li>
+              <li>Responsive UI with clean user experience</li>
             </ul>
             <p className="detail-stack">
-              <strong>Tech Stack:</strong> Python (Flask), Chart.js, HTML/CSS, JavaScript, nba_api, OpenAI API, SQLite
+              <strong>Tech Stack:</strong> JavaScript, HTML/CSS, Flask, Chart.js, OpenAI API
             </p>
-            <a 
-              href="https://github.com/Aryan-Kharva/DribbleData"
+            <a
+              href="https://github.com/Aryan-Kharva/dribbledata"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary mt-3"
@@ -58,25 +62,66 @@ const DribbleDataDetails = () => {
         <div className="container">
           <h2>More About This Project</h2>
           <p>
-            DribbleData was my senior capstone project, developed in collaboration with three other students — Piyush Patil, Kevin Amanna, and Brian Cruz. Our goal was to create a web app that makes NBA analytics more accessible and visually engaging for fans. I focused on both backend functionality and frontend UX, while working closely with my teammates to integrate APIs, refine features, and ensure a smooth user experience.
+            DribbleData was developed as a team project for our class, combining our interests in basketball and data visualization. It allows users to explore NBA statistics through interactive charts, filters, and summaries. The project also features a custom-built AI chatbot to answer basketball-related queries.
           </p>
+<br></br>
+          <h3>Presentation</h3>
+            <p>
+              As part of our final showcase, we presented DribbleData to our classmates and professor. I demoed the chatbot feature and explained how it was integrated using the OpenAI API.
+            </p>
+            <div className="project-inline-image">
+              <div className="project-inline-wrapper">
+                <a
+                  href="https://docs.google.com/presentation/d/1NICCr0dG_vvVedHdyVFWMGsKgA_Ax7Xx/edit?usp=sharing&ouid=106013390410796778067&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="presentation-image-link"
+                >
+                  <img
+                    src={require('../assets/images/dribble_slides.png')}
+                    alt="Presentation cover slide"
+                    className="project-sub-image dribble-presentation-image"
+                  />
+                </a>
+                <p className="project-image-caption">Click the cover slide to view our full project presentation</p>
+              </div>
+            </div>
 
-          <h3>Design & Functionality</h3>
+
+<br></br>
+          <h3>My Contributions</h3>
           <p>
-            I created a clean, dark-mode interface using Tailwind-inspired utility classes and custom CSS. The homepage uses a player carousel that lets logged-in users quickly jump into player stats. Charts are rendered dynamically with Chart.js and expand on click for better viewing.
+            I was responsible for implementing the entire chatbot feature — both frontend and backend — leveraging what I had learned from my research in generative AI. I also led the frontend development, designing the UI and layout to be clean, consistent, and responsive. In addition to my main tasks, I collaborated with teammates and helped debug issues across other areas of the site.
           </p>
+<br></br>
+          <h3>Key Features</h3>
+          <ul className="project-bullets">
+            <li>AI-powered chatbot trained to answer basketball-related queries using OpenAI</li>
+            <li>Player and team statistics visualized with interactive charts</li>
+            <li>Dynamic filters and dropdowns for stat categories, seasons, and teams</li>
+            <li>Clean, responsive UI built with HTML, CSS, and JavaScript</li>
+            <li>Collaborative development with modularized frontend/backend logic</li>
+          </ul>
 
+          <div className="project-inline-image">
+            <div className="project-inline-wrapper">
+            <img
+              src={dribbleChatbot}
+              alt="Chatbot interface screenshot"
+              className="project-sub-image dribble-chatbot-image"
+            />
+              <p className="project-image-caption">Chatbot feature — answers player stats questions using AI integration</p>
+            </div>
+          </div>
+<br></br>
+          <h3>Challenges</h3>
           <p>
-            A major highlight is the player comparison page — users can enter two names and view bar charts showing their last 5 playoff game stats side by side.
+            Integrating the chatbot smoothly was tricky — especially when managing async responses from the API and rendering them properly in the chat window. We also had to troubleshoot deployment bugs and data inconsistencies when pulling stats from external sources.
           </p>
-
-          <h3>Extra Features</h3>
+<br></br>
+          <h3>What I Learned</h3>
           <p>
-            I added login and signup functionality with hashed password storage using Flask-Login and SQLAlchemy. I also integrated an OpenAI-powered assistant that lives in the corner of the app, helping users ask questions about NBA stats or features.
-          </p>
-
-          <p>
-            This project really sharpened my skills with REST APIs, data handling in Python, and front-to-back user flow in web apps.
+            This project taught me how to integrate real-time AI tools into web applications and manage state across asynchronous operations. It also sharpened my frontend design skills and gave me experience working on a team with shared responsibilities and version control.
           </p>
         </div>
       </section>

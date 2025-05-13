@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../assets/css/project-detail.css';
 import potatoImage from '../assets/images/project3.png';
+import figma2 from '../assets/images/figma2.png';
+import potatoHome from '../assets/images/potato_home.png';
 
 const PotatoPropertiesDetails = () => {
   return (
@@ -15,7 +17,12 @@ const PotatoPropertiesDetails = () => {
             transition={{ duration: 0.6 }}
             style={{ flex: 1.2 }}
           >
-            <img src={potatoImage} alt="Potato Properties" className="img-fluid" style={{ width: '100%', maxHeight: '600px', objectFit: 'cover' }} />
+            <img
+              src={potatoImage}
+              alt="Potato Properties"
+              className="img-fluid"
+              style={{ width: '100%', maxHeight: '600px', objectFit: 'cover' }}
+            />
           </motion.div>
 
           <motion.div
@@ -26,24 +33,23 @@ const PotatoPropertiesDetails = () => {
           >
             <h1 className="detail-title">Potato Properties</h1>
             <div className="detail-meta">
-              <span>Apartment Management</span>
-              <span>Full Stack</span>
+              <span>Property Comparison Tool</span>
+              <span>Team Project</span>
             </div>
             <p className="detail-desc">
-              Potato Properties is a collaborative apartment management web application designed to streamline rental workflows for both tenants and landlords. Users can browse properties, apply online, track maintenance requests, and view dashboards tailored to their role.
+              Potato Properties is a full-stack property comparison platform developed by a team of students. It allows users to browse, compare, and save property listings in a clean, responsive interface. The project aimed to simplify property shopping by enabling side-by-side comparisons of key features and pricing.
             </p>
             <ul className="detail-features">
-              <li>Tenant and manager dashboards with role-based views</li>
-              <li>Online property applications and request forms</li>
-              <li>User login, registration, and session handling</li>
-              <li>Full CRUD for listings, leases, and service requests</li>
-              <li>Collaborative GitHub and Trello-based development process</li>
+              <li>Search and compare properties by criteria like price and room count</li>
+              <li>Favorites system for saving listings</li>
+              <li>Responsive layout optimized for all devices</li>
+              <li>Modular backend routes and templates</li>
             </ul>
             <p className="detail-stack">
-              <strong>Tech Stack:</strong> Node.js, Express.js, MongoDB, EJS, CSS, JavaScript
+              <strong>Tech Stack:</strong> Node.js, Express.js, MongoDB, EJS, JavaScript, CSS
             </p>
-            <a 
-              href="https://github.com/jlowe093/ITIS3300-GroupProject"
+            <a
+              href="https://github.com/Aryan-Kharva/potato-properties"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary mt-3"
@@ -58,21 +64,58 @@ const PotatoPropertiesDetails = () => {
         <div className="container">
           <h2>More About This Project</h2>
           <p>
-            This was a collaborative team project I worked on with five classmates as part of our software engineering coursework. I contributed heavily on both the frontend and backend — developing routes, building EJS templates, and working on session logic and form handling.
+            This was a collaborative effort between team members, with responsibilities split across features like search, compare, and saved listings. I led the initial design process and frontend structure.
+          </p>
+<br></br>
+          <h3>Design Process</h3>
+          <p>
+            I kicked off our team project by drafting the layout and structure in Figma. This helped align our group on what pages we needed, how the flow should work, and how to visually present search results, comparisons, and saved properties. It acted as the blueprint before we started coding together.
           </p>
 
-          <h3>Development Process</h3>
-          <p>
-            We planned the entire project using a shared Trello Kanban board and regularly split up tasks in sprints. From the database models to route handlers, we applied full-stack principles using Express, MongoDB, and modular EJS components.
-          </p>
+          <div className="project-inline-image">
+            <div className="project-inline-wrapper">
+              <img
+                src={figma2}
+                alt="Potato Properties Figma wireframe"
+                className="project-sub-image"
+              />
+              <p className="project-image-caption">
+                Initial Figma wireframe created to guide feature layout and team development
+              </p>
+            </div>
+          </div>
+<br></br>
+          <h3>Key Features</h3>
+          <ul className="project-bullets">
+            <li>Compare multiple properties side-by-side with interactive toggling</li>
+            <li>Property search with filtering by price, number of rooms, and type</li>
+            <li>Favorites/saved properties with persistent local state</li>
+            <li>Modular design using EJS templates and custom backend logic</li>
+            <li>Fully responsive layout built with CSS Grid and Flexbox</li>
+            <li>Team collaboration using Git for version control and component-based division of work</li>
+          </ul>
 
+          <div className="project-inline-image">
+            <div className="project-inline-wrapper">
+              <img
+                src={potatoHome}
+                alt="Potato Properties home page screenshot"
+                className="project-sub-image"
+              />
+              <p className="project-image-caption">
+                Home page — users can browse available properties and filter listings
+              </p>
+            </div>
+          </div>
+<br></br>
+          <h3>Challenges</h3>
           <p>
-            My contributions included form validation middleware, property application flow, dashboard views, and helping unify the visual styling across the app using consistent CSS layouts.
+            Coordinating multiple contributors on a team project came with its own set of challenges. Merging code, organizing Git branches, and keeping consistent styling across pages was a learning experience. On the technical side, implementing the comparison logic and ensuring clean UI updates without overlap took some trial and error.
           </p>
-
-          <h3>Lessons Learned</h3>
+<br></br>
+          <h3>What I Learned</h3>
           <p>
-            This project helped me grow as both a developer and a teammate. I learned how to contribute to a shared codebase effectively, resolve merge conflicts, and translate real-world requirements into working code under deadlines.
+            Potato Properties taught me how to work in a collaborative development environment. I got hands-on experience turning a Figma mockup into a working site, while also improving my skills in responsive design, modular coding, and conflict resolution in version control. It gave me confidence to contribute both visually and technically to team-based projects.
           </p>
         </div>
       </section>

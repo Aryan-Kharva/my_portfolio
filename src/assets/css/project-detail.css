@@ -19,6 +19,11 @@
   .detail-image {
     flex: 1.2;
   }
+
+.project-sub-image.dribble-chatbot-image {
+  max-width: 440px !important;
+}
+
   
   .detail-image img {
     width: 100%;
@@ -114,8 +119,137 @@
   .project-sub-image {
     width: 100%;
     max-width: 800px;
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }  
+  
+  .flyer-collage-structured {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.2rem;
+    margin-top: 2rem;
+    align-items: start;
+  }
+  
+  /* Base image styles */
+  .flyer-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* changed from contain */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .flyer-item:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Grid placements */
+  .parents {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+  }
+  
+  .flyer1 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  
+  .flyer3 {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  
+  .flyer2 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  
+  .flyer4 {
+    grid-row: 2;
+    grid-column: 3;
+  }
+  
+  /* Make 4th column act as spacing */
+  .flyer-collage-structured::after {
+    content: '';
+    grid-row: 1 / span 2;
+    grid-column: 4;
+  }
+  
+  /* Mobile fallback */
+  @media (max-width: 768px) {
+    .flyer-collage-structured {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  
+    .flyer-item {
+      grid-column: span 2 !important;
+      height: auto;
+    }
+  }
+  
+  .project-bullets {
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
+    list-style-type: disc;
+  }
+  
+  .project-bullets li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .project-image-with-caption {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .image-caption {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .project-inline-image {
+    margin-top: 1.5rem;
+  }
+  
+  .project-inline-image img {
+    display: block;
+    max-width: 800px;
+    border-radius: 8px;
+  }
+  
+  .project-image-caption {
+    margin-top: 0rem;
+    margin-left: 0.2rem;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .project-sub-image.project-sub-image-large {
+    max-width: 880px !important;
+  }
+
+  .presentation-image-link {
+    display: inline-block;
+    transition: transform 0.25s ease;
+  }
+  
+  .presentation-image-link:hover {
+    transform: scale(1.03);
+  }
+  
+  .project-sub-image.dribble-presentation-image {
+    max-width: 600px !important;
+    border-radius: 8px;
   }
   
