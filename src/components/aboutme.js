@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import '../assets/css/aboutme.css';
 import profilePic from '../assets/images/profile.png';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Personal carousel images
 import personal1 from '../assets/images/personal1.jpg';
